@@ -1,0 +1,1 @@
+print("Hello my name is ali") #this is comment for my personal notes
