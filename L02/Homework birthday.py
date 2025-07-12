@@ -1,10 +1,11 @@
 birthday1 = input("When is your birthday Aariz? ")
-
-
-
-
+birthday2 = input("When is your birthday Maryam? ")
+birthday3 = input("When is your birthday Omar? ")
+birthday4 = input("When is your birthday Eshaal? ")
+birthday5 = input("When is your birthday Ruhaimah? ")
 
 print("Aariz birthday is "+birthday1)
-
-
-
+print("Maryam birthday is "+birthday2)
+print("Omar birthday is "+birthday3)
+print("Eshaal birthday is "+birthday4)
+print("Ruhaimah birthday is "+birthday5)
