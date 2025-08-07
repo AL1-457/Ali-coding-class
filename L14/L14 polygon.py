@@ -1,7 +1,7 @@
 import turtle #importing library
 
 paper = turtle.Screen() # make the paper on the screen
-paper.bgcolor("blue") # set the 'paper' background color
+paper.bgcolor("lightblue") # set the 'paper' background color
 paper.setup(500,500) # width = 500, height = 500
 paper.title("Polygon")
 
