@@ -12,4 +12,3 @@ if num < 0:
 else:
     result = factorial(num) #calling function and save thev return value in a variable
     print(f"the factorial of {num} is {result}")
-    
