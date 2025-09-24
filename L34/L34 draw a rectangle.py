@@ -12,7 +12,7 @@ while True:
             # quit the program.
             quit()
         
-    #draw recttanngle
+    #draw rectangle
     pygame.draw.rect(screen, (0,125,255), pygame.Rect(30,30,60,60))
 
     pygame.display.flip()
