@@ -12,13 +12,13 @@ BACKGROUND_COLOR_CHANGE_EVENT = pygame.USEREVENT + 2
 # Background colors
 TEAL = pygame.Color('teal')
 VIOLET = pygame.Color('violet')
-GREEN = pygame.Color('green')
+LIMEGREEN = pygame.Color('limegreen')
 
 # Sprite colors
 YELLOW = pygame.Color('yellow')
-MAGENTA = pygame.Color(' magenta')
-RED = pygame.Color('red')
-WHITE = pygame.Color('white')
+PINK = pygame.Color('pink')
+PURPLE = pygame.Color('purple')
+GREY = pygame.Color('grey')
 
 # Sprite class representing the moving object
 class Sprite(pygame.sprite.Sprite):
@@ -62,18 +62,18 @@ class Sprite(pygame.sprite.Sprite):
 
     # Method to change the sprite's color
     def change_color(self):
-        self.image.fill(random.choice([YELLOW, MAGENTA, RED, WHITE]))
+        self.image.fill(random.choice([YELLOW, PINK, PURPLE, GREY]))
 
 # Function to change the background color
 def change_background_color():
     global bg_color
-    bg_color = random.choice([TEAL, VIOLET, GREEN])
+    bg_color = random.choice([TEAL, VIOLET, LIMEGREEN])
 
 # Create a group to hold the sprite
 all_sprites_list = pygame.sprite.Group()
 
 # Instantiate the sprite
-sp1 = Sprite(WHITE,20, 30)
+sp1 = Sprite(GREY,20, 30)
 
 # Randomly position the sprite
 sp1.rect.x = random.randint(0, 480)
@@ -117,13 +117,13 @@ while not exit:
       change_background_color()
 
   # Update all sprites
-  all_sprites_list.update()
+  all_sprites_list.__init__()
 
   # Fill the screen with the current background color
   screen.fill(bg_color)
 
   # Draw all sprites to the screen
-  all_sprites_list.draw(screen)
+  all_sprites_list.__init__(screen)
 
   # Refresh the display
   pygame.display.flip()
