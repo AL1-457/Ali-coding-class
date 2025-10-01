@@ -34,7 +34,7 @@ enemyX = []
 enemyY = []
 enemyX_change = []
 enemyY_change = []
-num_of_enemies = 6
+num_of_enemies = 10
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('L37 - L38/enemy.png'))
@@ -55,40 +55,40 @@ bullet_state = "ready"
 
 # Score
 score_value = 0
-font = pygame.font.Font('freesanbold.ttf', 32)
+font = pygame.font.Font()
 
-textX = 10
-testY = 10
+textX = 
+testY = 
 
 # Game Over
-over_font = pygame.font.Font('freesanbold.ttf', 64)
+over_font = pygame.font.Font()
 
 def show_score(x, y):
-    score = font.render("Score : " + str(score_value), True, (255, 255, 255))
-    screen.blit(score, (x, y))
+    score = font.render(" : " + str(score_value), True, (, , ))
+
 
 def game_over_text():
-    over_text = over_font.render("GAME OVER", True, (255,255 ,255))
-    screen.blit(over_text, (200, 250))
+    over_text = over_font.render("", True, (, , ))
+
 
 def player(x, y):
-     screen.blit(playerImg, (x, y))
+    
 
 def enemy(x, y, i):
-    screen.blit(playerImg[i], (x, y))
+    
 
 def fire_bullet(x, y):
-    global bullet_state
-    bullet_state = "fire"
-    screen.blit(bulletImg, (x + 16, y + 10))
+    
+
+
 
 
 def isCollision(enemyX, enemyY, bulletX, bulletY):
     distance = math.sqrt(math.pow(enemyX - bulletX, 2) + (math.pow(enemyY - bulletY, 2)))
-    if distance < 27:
-        return True
-    else:
-        return False
+
+
+
+
 
 
 # Game Loop
@@ -102,17 +102,17 @@ while running:
     screen.blit(background, (0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-             running = False
+            
 
         # if keystroke is pressed check whether its right or left
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                playerX_change = -5
+                playerX_change = 
             if event.key == pygame.K_RIGHT:
-                playerX_change = 5
+                playerX_change = 
             if event.key == pygame.K_SPACE:
-                if bullet_state == "ready":
-                    bulletSound = mixer.Sound("L37 - L38/laser.wav")
+                if bullet_state == :
+                    bulletSound = mixer.Sound("")
                     bulletSound.play()
 
                     # Get the current x cordinate of the spaceship
