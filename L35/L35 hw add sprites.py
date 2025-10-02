@@ -117,13 +117,13 @@ while not exit:
       change_background_color()
 
   # Update all sprites
-  all_sprites_list.__init__()
+  all_sprites_list.update()
 
   # Fill the screen with the current background color
   screen.fill(bg_color)
 
   # Draw all sprites to the screen
-  all_sprites_list.__init__(screen)
+  all_sprites_list.draw(screen)
 
   # Refresh the display
   pygame.display.flip()
