@@ -3,14 +3,13 @@ import tkinter as tk
 
 #Set-up the window
 window = tk.Tk()
-window.title("Interest Calculator")
+window.title("Length Converter")
 window.geometry("250x75")
 window.resizable(width=False, height=False)
 
-def interestCalculator():
-    interest = float(ent_interest.get())
-    time_period = 90
-    principal = interest * 0.05
+def inch_to_cm():
+    interest = float(ent_length.get())
+    principal = interest * 2.54
 
     LbL_result["text"] = f"{principal} principal"
 
@@ -18,21 +17,21 @@ def interestCalculator():
 #Create Widgets
 frm_entry = tk.Frame(master=window)
 
-ent_interest = tk.Entry(master=frm_entry, width=10)
+ent_length = tk.Entry(master=frm_entry, width=10)
 
-LbL_temp = tk.Label(master=frm_entry, text="interest")
+LbL_temp = tk.Label(master=frm_entry, text="inch")
 
-btn_principal = tk.Button(master=window, text="-->", command=interestCalculator)
+btn_convert = tk.Button(master=window, text="-->", command=inch_to_cm)
 
-LbL_result = tk.Label(master=window, text="principal")
+LbL_result = tk.Label(master=window, text="cm")
 
 # arrange the widgets
 frm_entry.grid(row=0, column=0, padx=10)
 
-ent_interest.grid(row=0, column=0, sticky="e")
+ent_length.grid(row=0, column=0, sticky="e")
 LbL_temp.grid(row=0, column=1, sticky="w")
 
-btn_principal.grid(row=0, column=1, padx=10)
+btn_convert.grid(row=0, column=1, padx=10)
 LbL_result.grid(row=0, column=2, padx=10)
 
 window.mainloop()
