@@ -3,15 +3,17 @@ import tkinter as tk
 
 #Set-up the window
 window = tk.Tk()
-window.title("Length Converter")
-window.geometry("250x75")
+window.title("Interest Calculator App")
+window.geometry("350x75")
 window.resizable(width=False, height=False)
 
-def inch_to_cm():
-    interest = float(ent_length.get())
-    principal = interest * 2.54
+def Inamnt():
+    Principle = float(ent_length.get())
+    Interest = 0.05
+    Timeperiod = 10.0
+    Result=Principle*Interest*Timeperiod
 
-    LbL_result["text"] = f"{principal} principal"
+    LbL_result["text"] = f"{Result} Result"
 
     
 #Create Widgets
@@ -19,11 +21,11 @@ frm_entry = tk.Frame(master=window)
 
 ent_length = tk.Entry(master=frm_entry, width=10)
 
-LbL_temp = tk.Label(master=frm_entry, text="inch")
+LbL_temp = tk.Label(master=frm_entry, text="Principle")
 
-btn_convert = tk.Button(master=window, text="-->", command=inch_to_cm)
+btn_convert = tk.Button(master=window, text="-->", command=Inamnt)
 
-LbL_result = tk.Label(master=window, text="cm")
+LbL_result = tk.Label(master=window, text="Result")
 
 # arrange the widgets
 frm_entry.grid(row=0, column=0, padx=10)
