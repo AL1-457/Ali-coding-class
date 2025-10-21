@@ -17,13 +17,16 @@ def generate_passwd():
     #combine the data
     all = lower + upper + num + symbols
 
-#use random
-temp = random.sample(all,pwdLength)
+    #use random
+    temp = random.sample(all,pwdLength)
 
-#create the password
-password = "".join(temp)
+    #create the password
+    password = "".join(temp)
 
-LBL_pwd["text"] = password
+    LbL_pwd["text"] = password
+ 
+#print the password
+#print("your random password is: "+password)
 
 #create widgets
 frame = Frame(master=window, height=150, width=360, bg= "#00ffff")
@@ -44,7 +47,7 @@ frame.place(x=20, y=0)
 LbL1.place(x=20, y=0)
 pwdlength_entry.place(x=150,y=20)
 
-Lbl2.place(x=20, y=80)
+LbL2.place(x=20, y=80)
 LbL_pwd.place(x=150, y=80)
 
 btn.place(x=130, y=210)
